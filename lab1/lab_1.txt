@@ -1,0 +1,22 @@
+
+Django Lab 1: Build a Simple Blog
+
+Objective:
+Create a basic blog using Django to practice working with models, views, templates, and routing. The blog should consist of two pages:
+1. A page that lists all blog posts by title.
+2. A detailed post page that displays the title, image, and full text of a selected post when its title is clicked.
+
+Requirements:
+- Use Django's built-in tools to create views, and render templates.
+- Store blog posts in with fields: title, image, and content.
+- Link each post title on the homepage to its detail page.
+
+
+Set Up URLs
+   - The homepage (/posts/) lists all posts with clickable titles.
+   - The detail page (/posts/<post_title>) displays a single post's full details.
+
+Create Views and Templates
+   - A view for listing all posts.
+   - A view for showing the detail of one post.
+   - Templates for both pages.

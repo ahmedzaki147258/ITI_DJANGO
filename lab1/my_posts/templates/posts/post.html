@@ -1,0 +1,20 @@
+{% extends "shared/base.html" %}
+{% load static %}
+
+{% block css_file %}
+    <link rel="stylesheet" href="{% static 'posts/style.css' %}">
+{% endblock css_file %}
+
+{% block title %}One Posts{% endblock title %}
+
+{% block content %}
+    <h1>My Post</h1>
+    <div class="posts-container">
+        <div class="post-card">
+            <img src="{% static post.image %}" alt="{{ post.title }}">
+            <h2 class="post-title">{{ post.title }}</h2>
+            <p class="post-content">{{ post.content }}</p>
+            <p><a href="{% url 'posts_index' %}">Back to All Posts</a></p>
+        </div>
+    </div>
+{% endblock content %}
