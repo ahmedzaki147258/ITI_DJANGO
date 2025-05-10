@@ -1,0 +1,32 @@
+{% extends "shared/base.html" %}
+{% load static %}
+
+{% block css_file %}
+    <link rel="stylesheet" href="{% static 'posts/style.css' %}">
+{% endblock css_file %}
+
+{% block title %}One Author{% endblock title %}
+
+{% block content %}
+    <h1>My Author</h1>
+    <div class="posts-container">
+        <div class="post-card">
+            <h2 class="post-title">{{ author.first_name }}{{ author.last_name }}</h2>
+            <p class="post-content">{{ author.email }}</p>
+            <p><a href="{% url 'posts_index' %}">Back to All Posts</a></p>
+
+            {% if posts %}
+                <h1>Posts:</h1>
+            {% endif %}
+
+            {% for post in posts %}
+                <li class="post-title">
+                    <a href="/posts/{{ post.id }}">
+                        {{ post.title }}
+                    </a>
+                </li>
+                <hr>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,33 @@
+
+Django Lab 2: Build a Simple Blog Using Models
+
+Objective:
+Create a basic blog using Django to practice working with models, views, templates, and URLs.
+
+The blog should consist of 3 pages:
+
+1. A Home page that lists all blog posts by title.
+
+2. A Detailed Post page that displays the post's title, date posted, author's full name, image, post content, and a comments section.
+   Note: This page should be accessible when clicking on the post title from the Home page.
+
+3. An Author Profile page that displays the author's full name, email, phone number, and the number and titles of the books they have written.
+
+Essential Functional Requirements:
+- Use Django's built-in tools to create views, models, and render templates.
+- Store Posts with the following fields: title, image_url (or image file this is for bonus), and content.
+- Store Authors with the following fields: first_name, last_name, phone_number, and email.
+- Store Comments with the following fields: content and posted_by (use static data for now).
+- Make each post title on the homepage clickable to navigate to the post detail page.
+- Make each author's name clickable to navigate to the author's profile page from the post detail page.
+
+Set Up URLs:
+- The homepage (/posts/) lists all posts with clickable titles.
+- The detail page (/posts/<pk>/) displays a single post's full details.
+
+Bonus:
+- Store post images as files in the model.
+- Add an image field to the Author model and display it in the profile page.
+
+Hint:
+Search for how to use models.FileField or models.ImageField and how to implement file uploads in Django.
