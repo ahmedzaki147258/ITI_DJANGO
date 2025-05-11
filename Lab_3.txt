@@ -1,0 +1,49 @@
+
+Django Lab 3: Create CRUD REST APIs for Blog Posts and Authors
+
+Objective:
+Build a RESTful API using Django and Django REST Framework (DRF) to support full CRUD (Create, Read, Update, Delete) operations for blog posts and authors.
+
+API Requirements:
+
+1. Post Endpoints:
+   - GET /api/posts/           → List all posts
+   - POST /api/posts/          → Create a new post
+   - GET /api/posts/<id>/      → Retrieve a specific post by ID
+   - PATCH /api/posts/<id>/    → Update an existing post
+   - DELETE /api/posts/<id>/   → Delete a post
+
+2. Author Endpoints:
+   - GET /api/authors/         → List all authors
+   - POST /api/authors/        → Create a new author
+   - GET /api/authors/<id>/    → Retrieve a specific author by ID
+   - PATCH /api/authors/<id>/  → Update an existing author
+   - DELETE /api/authors/<id>/ → Delete an author
+
+Models:
+
+- Post:
+  - title (CharField)
+  - content (TextField)
+  - author (ForeignKey to Author)
+
+- Author:
+  - first_name (CharField)
+  - last_name (CharField)
+  - phone_number (CharField)
+  - email (EmailField)
+
+Tools & Libraries:
+- Django
+- Django REST Framework
+- Pillow (for image handling)
+
+Tasks:
+1. Create serializers for both Post and Author models.
+2. Create API views to handle CRUD operations.
+3. Configure URL routing using DRF's URLS.
+
+
+
+Hint:
+Refer to the Django REST Framework documentation for examples on serializers, generics.
